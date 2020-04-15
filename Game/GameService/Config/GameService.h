@@ -2,7 +2,7 @@
 //  GameService.h
 //  GameService
 //
-//  Created by NHNEnt on 2020/03/14.
+//  Created by Jerome on 2020/03/14.
 //  Copyright © 2020 podo. All rights reserved.
 //
 

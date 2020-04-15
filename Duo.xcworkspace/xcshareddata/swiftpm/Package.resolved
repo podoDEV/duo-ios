@@ -9,6 +9,15 @@
           "revision": "b02c4ee7f1659090f7ac543c022f922beeb04bc6",
           "version": "5.0.2"
         }
+      },
+      {
+        "package": "KeychainAccess",
+        "repositoryURL": "https://github.com/kishikawakatsumi/KeychainAccess.git",
+        "state": {
+          "branch": null,
+          "revision": "b920ad7df3c73189dcdd4aa05c540849b2010dbf",
+          "version": "4.1.0"
+        }
       }
     ]
   },
