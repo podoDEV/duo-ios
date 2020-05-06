@@ -7,11 +7,11 @@
 //
 
 import Combine
+import Common
 
 public protocol AuthRepositoryType {
-  func register(provider: AuthProvider) -> AnyPublisher<AuthToken>
-  func login(provider: AuthProvider) -> AnyPublisher<AuthToken>
-  func logout()
+  func login(provider: AuthProvider) -> AnyPublisher<AuthToken, APIError>
+  func logout() -> AnyPublisher<Bool, APIError>
 
   func saveToken(authToken: AuthToken) throws
   func loadToken() -> AuthToken?

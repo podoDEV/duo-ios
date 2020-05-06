@@ -9,24 +9,24 @@
 /* Begin PBXBuildFile section */
 		2D1913AC23E51E36003F8B23 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1913AB23E51E36003F8B23 /* AppDelegate.swift */; };
 		2D1913AE23E51E36003F8B23 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1913AD23E51E36003F8B23 /* SceneDelegate.swift */; };
-		2D1913B023E51E36003F8B23 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1913AF23E51E36003F8B23 /* ContentView.swift */; };
 		2D1913B223E51E37003F8B23 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2D1913B123E51E37003F8B23 /* Assets.xcassets */; };
 		2D1913B523E51E37003F8B23 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2D1913B423E51E37003F8B23 /* Preview Assets.xcassets */; };
 		2D1913B823E51E37003F8B23 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D1913B623E51E37003F8B23 /* LaunchScreen.storyboard */; };
 		2DC74185241C81CC008E4A23 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 2DC74184241C81CC008E4A23 /* Alamofire */; };
+		EBE92276244B62420077C20A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE92275244B62420077C20A /* ContentView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		2D1913A823E51E36003F8B23 /* Duo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Duo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D1913AB23E51E36003F8B23 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2D1913AD23E51E36003F8B23 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		2D1913AF23E51E36003F8B23 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		2D1913B123E51E37003F8B23 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2D1913B423E51E37003F8B23 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		2D1913B723E51E37003F8B23 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2D1913B923E51E37003F8B23 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2D1913BF23E51ED8003F8B23 /* Duo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Duo.entitlements; sourceTree = "<group>"; };
 		2DC7419F241C863A008E4A23 /* Game.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Game.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EBE92275244B62420077C20A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,13 +63,9 @@
 		2D1913AA23E51E36003F8B23 /* Duo */ = {
 			isa = PBXGroup;
 			children = (
-				2D1913BF23E51ED8003F8B23 /* Duo.entitlements */,
-				2D1913AB23E51E36003F8B23 /* AppDelegate.swift */,
-				2D1913AD23E51E36003F8B23 /* SceneDelegate.swift */,
-				2D1913AF23E51E36003F8B23 /* ContentView.swift */,
-				2D1913B123E51E37003F8B23 /* Assets.xcassets */,
-				2D1913B623E51E37003F8B23 /* LaunchScreen.storyboard */,
-				2D1913B923E51E37003F8B23 /* Info.plist */,
+				EBE92272244B5F6B0077C20A /* App */,
+				EBE92274244B5FAD0077C20A /* Resources */,
+				EBE92273244B5F800077C20A /* Supporting Files */,
 				2D1913B323E51E37003F8B23 /* Preview Content */,
 			);
 			path = Duo;
@@ -89,6 +85,34 @@
 				2DC7419F241C863A008E4A23 /* Game.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EBE92272244B5F6B0077C20A /* App */ = {
+			isa = PBXGroup;
+			children = (
+				2D1913AB23E51E36003F8B23 /* AppDelegate.swift */,
+				2D1913AD23E51E36003F8B23 /* SceneDelegate.swift */,
+				EBE92275244B62420077C20A /* ContentView.swift */,
+				2D1913B623E51E37003F8B23 /* LaunchScreen.storyboard */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		EBE92273244B5F800077C20A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				2D1913B923E51E37003F8B23 /* Info.plist */,
+				2D1913BF23E51ED8003F8B23 /* Duo.entitlements */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		EBE92274244B5FAD0077C20A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				2D1913B123E51E37003F8B23 /* Assets.xcassets */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -170,7 +194,7 @@
 			files = (
 				2D1913AC23E51E36003F8B23 /* AppDelegate.swift in Sources */,
 				2D1913AE23E51E36003F8B23 /* SceneDelegate.swift in Sources */,
-				2D1913B023E51E36003F8B23 /* ContentView.swift in Sources */,
+				EBE92276244B62420077C20A /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -312,7 +336,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"Duo/Preview Content\"";
 				DEVELOPMENT_TEAM = 7KW522KWZF;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = Duo/Info.plist;
+				INFOPLIST_FILE = "Duo/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -337,7 +361,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"Duo/Preview Content\"";
 				DEVELOPMENT_TEAM = 7KW522KWZF;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = Duo/Info.plist;
+				INFOPLIST_FILE = "Duo/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

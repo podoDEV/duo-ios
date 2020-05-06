@@ -9,7 +9,6 @@
 import KeychainAccess
 
 final class AuthLocalRepository: AuthLocalDataSource {
-
   private let keychain = Keychain(service: "com.podo.duo")
 
   func saveToken(authToken: AuthToken) throws {

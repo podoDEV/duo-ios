@@ -16,7 +16,6 @@ public protocol AuthLocalDataSource {
 }
 
 public protocol AuthRemoteDataSource {
-  func register(provider: AuthProvider) -> AnyPublisher<String, APIError>
-  func login(provider: AuthProvider) -> AnyPublisher<String, APIError>
-  func logout()
+  func login(provider: AuthProvider) -> AnyPublisher<AuthToken, APIError>
+  func logout() -> AnyPublisher<Bool, APIError>
 }

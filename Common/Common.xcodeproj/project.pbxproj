@@ -3,12 +3,15 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		2D74EEC724445983009902DC /* Common.h in Headers */ = {isa = PBXBuildFile; fileRef = 2D74EEC524445983009902DC /* Common.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2D74EECF24445A0F009902DC /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D74EECE24445A0F009902DC /* APIError.swift */; };
+		EBE92265244AADEC0077C20A /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE92264244AADEC0077C20A /* Networking.swift */; };
+		EBE92269244AAE680077C20A /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = EBE92268244AAE680077C20A /* Moya */; };
+		EBE92271244B56070077C20A /* ServiceError.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE92270244B56070077C20A /* ServiceError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -16,6 +19,8 @@
 		2D74EEC524445983009902DC /* Common.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Common.h; sourceTree = "<group>"; };
 		2D74EEC624445983009902DC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2D74EECE24445A0F009902DC /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
+		EBE92264244AADEC0077C20A /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
+		EBE92270244B56070077C20A /* ServiceError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -23,6 +28,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EBE92269244AAE680077C20A /* Moya in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -50,9 +56,9 @@
 		2D74EEC424445983009902DC /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				EBE92266244AADF90077C20A /* Config */,
 				2D74EECD244459FB009902DC /* Model */,
-				2D74EEC524445983009902DC /* Common.h */,
-				2D74EEC624445983009902DC /* Info.plist */,
+				EBE92263244AADCC0077C20A /* Networking */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -61,8 +67,26 @@
 			isa = PBXGroup;
 			children = (
 				2D74EECE24445A0F009902DC /* APIError.swift */,
+				EBE92270244B56070077C20A /* ServiceError.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		EBE92263244AADCC0077C20A /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				EBE92264244AADEC0077C20A /* Networking.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		EBE92266244AADF90077C20A /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				2D74EEC524445983009902DC /* Common.h */,
+				2D74EEC624445983009902DC /* Info.plist */,
+			);
+			path = Config;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -93,6 +117,9 @@
 			dependencies = (
 			);
 			name = Common;
+			packageProductDependencies = (
+				EBE92268244AAE680077C20A /* Moya */,
+			);
 			productName = Common;
 			productReference = 2D74EEC224445983009902DC /* Common.framework */;
 			productType = "com.apple.product-type.framework";
@@ -121,6 +148,9 @@
 				Base,
 			);
 			mainGroup = 2D74EEB824445983009902DC;
+			packageReferences = (
+				EBE92267244AAE680077C20A /* XCRemoteSwiftPackageReference "Moya" */,
+			);
 			productRefGroup = 2D74EEC324445983009902DC /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -145,7 +175,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EBE92271244B56070077C20A /* ServiceError.swift in Sources */,
 				2D74EECF24445A0F009902DC /* APIError.swift in Sources */,
+				EBE92265244AADEC0077C20A /* Networking.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,7 +314,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = Common/Info.plist;
+				INFOPLIST_FILE = Common/Config/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -309,7 +341,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = Common/Info.plist;
+				INFOPLIST_FILE = Common/Config/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -347,6 +379,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		EBE92267244AAE680077C20A /* XCRemoteSwiftPackageReference "Moya" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Moya/Moya.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 14.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		EBE92268244AAE680077C20A /* Moya */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EBE92267244AAE680077C20A /* XCRemoteSwiftPackageReference "Moya" */;
+			productName = Moya;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 2D74EEB924445983009902DC /* Project object */;
 }

@@ -9,6 +9,8 @@
 import Foundation
 
 public enum APIError: Error {
+  case requestError
   case responseError
-  case parseError(Error)
+  case parsingError
+  case unknown(Error)
 }

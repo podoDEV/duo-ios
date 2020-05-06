@@ -18,6 +18,11 @@
 		2D80C66C244722C1000EA5CB /* Common.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D80C66B244722C1000EA5CB /* Common.framework */; };
 		2D80C66D244722C1000EA5CB /* Common.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2D80C66B244722C1000EA5CB /* Common.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		2D80C670244725A0000EA5CB /* AuthToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D80C66F244725A0000EA5CB /* AuthToken.swift */; };
+		EBE92252244AA4930077C20A /* MemberService.h in Headers */ = {isa = PBXBuildFile; fileRef = EBE92244244AA4930077C20A /* MemberService.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EBE9225B244AA5BD0077C20A /* MemberService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE9225A244AA5BD0077C20A /* MemberService.swift */; };
+		EBE9225F244AA8C30077C20A /* AuthRemoteRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE9225E244AA8C30077C20A /* AuthRemoteRepository.swift */; };
+		EBE92262244AAA230077C20A /* AuthAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE92261244AAA230077C20A /* AuthAPI.swift */; };
+		EBE9226F244ADCB70077C20A /* AuthPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE9226E244ADCB70077C20A /* AuthPlugin.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -46,6 +51,13 @@
 		2D80C66824472242000EA5CB /* AuthProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthProvider.swift; sourceTree = "<group>"; };
 		2D80C66B244722C1000EA5CB /* Common.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Common.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D80C66F244725A0000EA5CB /* AuthToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthToken.swift; sourceTree = "<group>"; };
+		EBE92242244AA4930077C20A /* MemberService.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MemberService.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EBE92244244AA4930077C20A /* MemberService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MemberService.h; sourceTree = "<group>"; };
+		EBE92245244AA4930077C20A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EBE9225A244AA5BD0077C20A /* MemberService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberService.swift; sourceTree = "<group>"; };
+		EBE9225E244AA8C30077C20A /* AuthRemoteRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AuthRemoteRepository.swift; path = MemberService/Interactor/AuthRemoteRepository.swift; sourceTree = SOURCE_ROOT; };
+		EBE92261244AAA230077C20A /* AuthAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AuthAPI.swift; path = AuthService/Data/Remote/Api/AuthAPI.swift; sourceTree = SOURCE_ROOT; };
+		EBE9226E244ADCB70077C20A /* AuthPlugin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthPlugin.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +70,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		EBE9223F244AA4930077C20A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -65,6 +84,7 @@
 			isa = PBXGroup;
 			children = (
 				2D74EE9B24445431009902DC /* AuthService */,
+				EBE92243244AA4930077C20A /* MemberService */,
 				2D74EE4824444B3C009902DC /* Products */,
 				2D80C66A244722C1000EA5CB /* Frameworks */,
 			);
@@ -76,6 +96,7 @@
 			isa = PBXGroup;
 			children = (
 				2D74EE9A24445431009902DC /* AuthService.framework */,
+				EBE92242244AA4930077C20A /* MemberService.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -83,11 +104,12 @@
 		2D74EE9B24445431009902DC /* AuthService */ = {
 			isa = PBXGroup;
 			children = (
+				EBE9225C244AA6AD0077C20A /* Config */,
 				2D74EEA824445526009902DC /* Data */,
+				EBE9223C244AA39C0077C20A /* Entities */,
 				2D74EEB72444594E009902DC /* Model */,
 				2D74EEB4244456F8009902DC /* Interactor */,
-				2D74EEA224445458009902DC /* AuthService.h */,
-				2D74EEA324445458009902DC /* Info.plist */,
+				EBE9226D244ADC9D0077C20A /* Plugin */,
 			);
 			path = AuthService;
 			sourceTree = "<group>";
@@ -114,6 +136,8 @@
 		2D74EEAC2444556C009902DC /* Remote */ = {
 			isa = PBXGroup;
 			children = (
+				EBE92260244AAA0F0077C20A /* Api */,
+				EBE9225E244AA8C30077C20A /* AuthRemoteRepository.swift */,
 			);
 			path = Remote;
 			sourceTree = "<group>";
@@ -144,6 +168,65 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		EBE9223C244AA39C0077C20A /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		EBE92243244AA4930077C20A /* MemberService */ = {
+			isa = PBXGroup;
+			children = (
+				EBE9225D244AA6EA0077C20A /* Config */,
+				EBE92259244AA5950077C20A /* Interactor */,
+			);
+			path = MemberService;
+			sourceTree = "<group>";
+		};
+		EBE92259244AA5950077C20A /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				EBE9225A244AA5BD0077C20A /* MemberService.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		EBE9225C244AA6AD0077C20A /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				2D74EEA224445458009902DC /* AuthService.h */,
+				2D74EEA324445458009902DC /* Info.plist */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
+		EBE9225D244AA6EA0077C20A /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				EBE92244244AA4930077C20A /* MemberService.h */,
+				EBE92245244AA4930077C20A /* Info.plist */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
+		EBE92260244AAA0F0077C20A /* Api */ = {
+			isa = PBXGroup;
+			children = (
+				EBE92261244AAA230077C20A /* AuthAPI.swift */,
+			);
+			name = Api;
+			path = AuthService/Data/Remote/Api;
+			sourceTree = "<group>";
+		};
+		EBE9226D244ADC9D0077C20A /* Plugin */ = {
+			isa = PBXGroup;
+			children = (
+				EBE9226E244ADCB70077C20A /* AuthPlugin.swift */,
+			);
+			path = Plugin;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -152,6 +235,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				2D74EEA424445458009902DC /* AuthService.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EBE9223D244AA4930077C20A /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EBE92252244AA4930077C20A /* MemberService.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -180,6 +271,24 @@
 			productReference = 2D74EE9A24445431009902DC /* AuthService.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		EBE92241244AA4930077C20A /* MemberService */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EBE92253244AA4930077C20A /* Build configuration list for PBXNativeTarget "MemberService" */;
+			buildPhases = (
+				EBE9223D244AA4930077C20A /* Headers */,
+				EBE9223E244AA4930077C20A /* Sources */,
+				EBE9223F244AA4930077C20A /* Frameworks */,
+				EBE92240244AA4930077C20A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MemberService;
+			productName = MemberService;
+			productReference = EBE92242244AA4930077C20A /* MemberService.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -192,6 +301,10 @@
 				TargetAttributes = {
 					2D74EE9924445431009902DC = {
 						CreatedOnToolsVersion = 11.4;
+						LastSwiftMigration = 1140;
+					};
+					EBE92241244AA4930077C20A = {
+						CreatedOnToolsVersion = 11.4.1;
 						LastSwiftMigration = 1140;
 					};
 				};
@@ -213,12 +326,20 @@
 			projectRoot = "";
 			targets = (
 				2D74EE9924445431009902DC /* AuthService */,
+				EBE92241244AA4930077C20A /* MemberService */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		2D74EE9824445431009902DC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EBE92240244AA4930077C20A /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -235,10 +356,21 @@
 				2D80C66924472242000EA5CB /* AuthProvider.swift in Sources */,
 				2D74EEB0244455B4009902DC /* AuthDataSource.swift in Sources */,
 				2D74EEAE24445588009902DC /* AuthLocalRepository.swift in Sources */,
+				EBE9225F244AA8C30077C20A /* AuthRemoteRepository.swift in Sources */,
+				EBE9226F244ADCB70077C20A /* AuthPlugin.swift in Sources */,
 				2D74EEA7244454A5009902DC /* AuthService.swift in Sources */,
 				2D74EEB624445711009902DC /* AuthRepositoryType.swift in Sources */,
 				2D80C670244725A0000EA5CB /* AuthToken.swift in Sources */,
+				EBE92262244AAA230077C20A /* AuthAPI.swift in Sources */,
 				2D74EEAA24445542009902DC /* AuthRepository.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EBE9223E244AA4930077C20A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EBE9225B244AA5BD0077C20A /* MemberService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -296,7 +428,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -353,7 +485,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -375,14 +507,15 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = AuthService/Info.plist;
+				INFOPLIST_FILE = AuthService/Config/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.podo.AuthService;
+				PRODUCT_BUNDLE_IDENTIFIER = com.podo.duo.authservice;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -401,14 +534,68 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = AuthService/Info.plist;
+				INFOPLIST_FILE = AuthService/Config/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.podo.AuthService;
+				PRODUCT_BUNDLE_IDENTIFIER = com.podo.duo.authservice;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		EBE92254244AA4930077C20A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 7KW522KWZF;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = MemberService/Config/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.podo.duo.memberservice;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		EBE92255244AA4930077C20A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 7KW522KWZF;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = MemberService/Config/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.podo.duo.memberservice;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
@@ -433,6 +620,15 @@
 			buildConfigurations = (
 				2D74EEA024445431009902DC /* Debug */,
 				2D74EEA124445431009902DC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EBE92253244AA4930077C20A /* Build configuration list for PBXNativeTarget "MemberService" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EBE92254244AA4930077C20A /* Debug */,
+				EBE92255244AA4930077C20A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

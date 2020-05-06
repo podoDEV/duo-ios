@@ -22,16 +22,12 @@ public class AuthRepository: AuthRepositoryType {
     self.remote = remote
   }
 
-  public func register(provider: AuthProvider) -> AnyPublisher<String, APIError> {
-    remote.register(provider: provider)
-  }
-
-  public func login(provider: AuthProvider) -> AnyPublisher<String, APIError> {
+  public func login(provider: AuthProvider) -> AnyPublisher<AuthToken, APIError> {
     remote.login(provider: provider)
   }
 
-  public func logout() {
-
+  public func logout() -> AnyPublisher<Bool, APIError> {
+    remote.logout()
   }
 
   public func saveToken(authToken: AuthToken) throws {
